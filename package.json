@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "chartjs": "^0.3.24",
+    "chart.js": "^2.7.2",
     "material-ui": "^0.20.0",
     "react": "^16.2.0",
-    "react-chartjs": "^1.2.0",
     "react-chartjs-2": "^2.7.0",
     "react-dom": "^16.2.0",
     "react-mdl": "^1.11.0",

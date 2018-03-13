@@ -9,6 +9,7 @@ import Resume from './resume';
 
 
 
+
 const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage}/>
@@ -17,6 +18,7 @@ const Main = () => (
     <Route path="/projects" component={Projects}/>
     <Route path="/resume" component={Resume}/>
     <Route path="/blog" component={Blog}/>
+
   </Switch>
 )
 

@@ -116,7 +116,7 @@ class Projects extends Component {
                  <IconButton name="share"/>
                </CardMenu>
             </Card>
-            
+
           </div>
 
       )

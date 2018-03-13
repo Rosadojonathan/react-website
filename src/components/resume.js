@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Grid, Cell } from 'react-mdl';
-
+import {Bar} from 'react-chartjs-2';
 import Education from './education';
 import Experience from "./experience";
 import Skills from './skills';
@@ -12,6 +12,32 @@ import hubspotLogo from '../img/hubspot-logo.jpg';
 import freecodecampLogo from '../img/freecodecamp.jpeg';
 
 class Resume extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      chartData:{
+        labels:['Anglais','Espagnol','Allemand','Italien','Néerlandais','Suédois','Catalan','Portugais','Russe'],
+        datasets:[{
+          label:'Niveau',
+          //data:['C2','C2','C1','C1','B2','B2','B2','B2','B1'],
+          data:[6,6,5.5,5,4.5,4,4,3.5,3,0],
+          backgroundColor:[
+            "#f38b4a",
+          "#f38b4a",
+          "#6970d5",
+           "#6970d5",
+          "#56d798",
+           "#56d798",
+           "#56d798",
+          "#56d798",
+           "#ff8397",
+           "#ff8397",
+
+          ]
+        }]
+      }
+    }
+  }
 
   render() {
     return (
@@ -25,12 +51,12 @@ class Resume extends Component {
             <h2 style={{paddingTop:'2em'}}>Jonathan Rosado</h2>
             <h4 style={{color:'grey'}}>Tech-Marketer</h4>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
-            <p>Autodidacte e</p>
+            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. </p>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
             <h5>Addresse</h5>
             <p>Toulouse, Occitanie</p>
             <h5>Téléphone</h5>
-            <p>123-456-768</p>
+            <p>06-46-74-63-75</p>
             <h5>Email</h5>
             <p>jonathan@jonathanrosado.fr</p>
             <h5>LinkedIn</h5>
@@ -60,7 +86,7 @@ class Resume extends Component {
               startYear="Février 2017"
               endYear="Maintenant"
               jobName="SEA Manager & Market-Tech"
-              jobDescription="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolor dignissimos omnis maxime culpa quod nulla quasi fugit aliquid? Architecto molestiae dolorum magni culpa! Aperiam obcaecati vel hic porro adipisci."
+              jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux scripts d'automatisation et un modèle prédictif de Machine Learning afin de décupler mon efficacité et aider la startup à scaler son système d'acquisition."
             />
 
 
@@ -79,14 +105,14 @@ class Resume extends Component {
             startYear={2016}
             endYear={2017}
             schoolName="Université Toulouse - Jean Jaurès "
-            schoolDescription=""
+            schoolDescription="Cette année de Commerce International m'a permis de développer mes compétences en Business Development ainsi qu'en négociation interculturelle."
             schoolDegree="Master 1 - Commerce International"
             />
             <Education
             startYear={2013}
             endYear={2016}
             schoolName="Université Perpignan Via Domitia"
-            schoolDescription=""
+            schoolDescription="Lors de ma Licence en LEA, j'ai amélioré mes capacités de communication professionnelle en anglais, espagnol et allemand."
             schoolDegree="Licence Langues Etrangères Appliquées"
             />
 
@@ -119,6 +145,44 @@ class Resume extends Component {
               />
               <hr style={{borderTop:"3px solid white"}}/>
               <h3>Langues</h3>
+              <Bar
+                data={this.state.chartData}
+                width={500}
+                height={400}
+                options={{
+                  title:{
+                    display:true,
+                    text:"Niveau en langues selon l'échelle CECRL",
+                    fontSize:16
+                  },
+                  maintainAspectRatio:true,
+                  scales:{
+                    yAxes:[{
+                      ticks: {
+                            callback: function(value) {
+                              if (value === 1)
+                                return 'A1';
+                              else if (value === 2)
+                                return 'A2';
+                              else if (value === 3)
+                                return 'B1';
+                              else if (value === 4)
+                                return 'B2';
+                              else if (value === 5)
+                                return 'C1';
+                              else if (value === 6)
+                                return 'C2';
+                              else
+                                return '';
+                              }
+                            }
+                    }
+                    ]
+                  },
+                }}
+
+
+              />
 
           </Cell>
         </Grid>
