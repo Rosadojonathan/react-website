@@ -3,11 +3,13 @@ import React, { Component } from 'react';
 import {Cell, Card, CardTitle,CardText, Link} from 'react-mdl';
 
 
+
 class Article extends Component {
 
   render() {
     return (
       <Cell col={9} style={{padding:'8px'}}>
+        {/* <Link to={`/blog/${this.props.linkTitle}`} > */}
         <a href={`/blog/${this.props.linkTitle}`} style={{textDecoration:'none'}}>
           <Card shadow={5} style={{minWidth:'700px',margin:'auto',maxHeight:'200px'}}>
 
@@ -16,6 +18,7 @@ class Article extends Component {
 
           </Card>
         </a>
+      {/* </Link> */}
       </Cell>
     );
   }

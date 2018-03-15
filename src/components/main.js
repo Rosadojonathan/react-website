@@ -6,6 +6,7 @@ import Contact from './contact';
 import Projects from './projects';
 import Blog from './blog';
 import Resume from './resume';
+import ArticlePost from './articlepost';
 
 
 
@@ -17,7 +18,9 @@ const Main = () => (
     <Route path="/contact" component={Contact}/>
     <Route path="/projects" component={Projects}/>
     <Route path="/resume" component={Resume}/>
-    <Route path="/blog" component={Blog}/>
+    <Route exact path="/blog" component={Blog} />
+    <Route path="/blog/:article" component={ArticlePost} />
+
 
   </Switch>
 )

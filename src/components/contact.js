@@ -6,26 +6,44 @@ class Contact extends Component {
  state = {
    email: '',
    message:'',
+   name:'',
  };
 
  onSubmit = () => {
-   if (this.state.email && this.state.message){
+   if (this.state.name && this.state.email && this.state.message){
      console.log(this.state);
 
-     this.setState({email: '',message:'',bgColor:'green'})
+     this.setState({email: '',message:'',name:'', bgColor:'green',msgSend:true})
+     setTimeout(()=> this.setState({bgColor:'',msgSend:false}),1200)
    }
    else {
-     alert('Please fill both input fields')
+     alert("Remplissez tous les champs s'il vous plaît")
    }
  }
 
   render() {
+
+    let bgColor = this.state.bgColor ? this.state.bgColor : '';
+    let message = this.state.msgSend ? "✔" : "Envoyer";
     return (
   <div style={{width:'100%',margin:'auto'}}>
     <Grid className="landing-grid" style={{top:'170px'}}>
       <Cell col={12}>
 
         <h3 style={{}}>Me contacter</h3>
+        <Textfield
+                onChange={() => {}}
+                name="name"
+                label="Nom..."
+                value={this.state.name}
+
+                onChange={e => this.setState({name: e.target.value})}
+                pattern="\S+"
+                error="Entrez un nom quand même..."
+                floatingLabel
+                style={{width: '400px'}}
+            />
+            <br/>
         <Textfield
                 onChange={() => {}}
                 name="email"
@@ -52,7 +70,7 @@ class Contact extends Component {
             />
 
             <br/>
-        <Button raised colored ripple onClick={() => this.onSubmit()} >Envoyer</Button>
+        <Button raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
 
       </Cell>
     </Grid>

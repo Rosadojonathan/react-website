@@ -51,7 +51,7 @@ class Resume extends Component {
             <h2 style={{paddingTop:'2em'}}>Jonathan Rosado</h2>
             <h4 style={{color:'grey'}}>Tech-Marketer</h4>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
-            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. </p>
+            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. Une journée sans apprendre quoi que ce soit de nouveau est une journée perdue.</p>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
             <h5>Addresse</h5>
             <p>Toulouse, Occitanie</p>
