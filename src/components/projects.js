@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from 'react-helmet';
 import { Tabs, Tab,Grid,Cell,Card,CardTitle,Button,CardMenu,IconButton, CardText, CardActions} from 'react-mdl';
 
 import machineLearningIcon from '../img/machinelearningicon.svg';
@@ -17,9 +18,15 @@ class Projects extends Component {
     if (this.state.activeTab === 0){
       return (
       <div className="projects-grid">
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Projets Tech-Market - Tech-Marketer</title>
+        </Helmet>
+
         <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
           <CardTitle style={{color:'#fff',height:'176px',background:`url(${reactIcon}) center / cover`}}></CardTitle>
-          <CardTitle style={{color:'black'}}>Création d'un site internet sous React</CardTitle>
+          <CardTitle style={{color:'black', fontWeight:'bold'}}>Création d'un site internet sous React</CardTitle>
           <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
            <CardActions border>
              <Button colored style={{textAlign:'center'}}>GitHub</Button>
@@ -36,7 +43,7 @@ class Projects extends Component {
         <div className="projects-grid">
           <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${machineLearningIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black'}}>Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires</CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires</CardTitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
@@ -53,9 +60,9 @@ class Projects extends Component {
     else if (this.state.activeTab === 2) {
       return (
         <div className="projects-grid">
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${facebookIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black'}}>Automatisation de la création de Facebook Ads</CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la création de Facebook Ads</CardTitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
@@ -64,9 +71,9 @@ class Projects extends Component {
                <IconButton name="share"/>
              </CardMenu>
           </Card>
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${facebookIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black'}}>Automatisation de la sponsorisation de posts Facebook</CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la sponsorisation de posts Facebook</CardTitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
@@ -81,9 +88,9 @@ class Projects extends Component {
     else if (this.state.activeTab === 3){
       return (
         <div className="projects-grid">
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black'}}>Slackbot d'alerte CPA Facebook Ads</CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Slackbot d'alerte CPA Facebook Ads</CardTitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
@@ -93,9 +100,9 @@ class Projects extends Component {
              </CardMenu>
           </Card>
 
-          <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+          <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black'}}>Slackbot d'alerte CPA Adwords</CardTitle>
+            <CardTitle style={{color:'black', fontWeight:'bold', fontWeight:'bold'}}>Slackbot d'alerte CPA Adwords</CardTitle>
             <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
@@ -105,9 +112,9 @@ class Projects extends Component {
              </CardMenu>
           </Card>
 
-            <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
+            <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
               <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
-              <CardTitle style={{color:'black'}}>Slackbot d'alerte absence de stocks sur fiche produit</CardTitle>
+              <CardTitle style={{color:'black', fontWeight:'bold'}}>Slackbot d'alerte absence de stocks sur fiche produit</CardTitle>
               <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
                <CardActions border>
                  <Button colored style={{textAlign:'center'}}>GitHub</Button>

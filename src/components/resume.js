@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from 'react-helmet';
 import { Grid, Cell } from 'react-mdl';
 import {Bar} from 'react-chartjs-2';
 import Education from './education';
@@ -10,6 +11,7 @@ import googleAnalyticsLogo from '../img/google-analytics.png';
 import datacampLogo from '../img/datacamp.png';
 import hubspotLogo from '../img/hubspot-logo.jpg';
 import freecodecampLogo from '../img/freecodecamp.jpeg';
+import linkedinLogo from '../img/linkedin.png';
 
 class Resume extends Component {
   constructor(props){
@@ -42,6 +44,10 @@ class Resume extends Component {
   render() {
     return (
       <div>
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>CV de Jonathan Rosado - Tech Marketer </title>
+        </Helmet>
         <Grid>
           <Cell col={4}>
 
@@ -60,7 +66,12 @@ class Resume extends Component {
             <h5>Email</h5>
             <p>jonathan@jonathanrosado.fr</p>
             <h5>LinkedIn</h5>
-            <a style={{textDecoration:'none',color:'blue'}} href="https://www.linkedin.com/in/jonathan-rosado-967067130/">https://www.linkedin.com/jonathanrosado/</a>
+
+            <a style={{cursor:'pointer'}} href="https://www.linkedin.com/in/jonathan-rosado-967067130/">
+                <img src={linkedinLogo} style={{height:'50px',width:'50px'}}alt="linkedin logo"/>
+
+            </a>
+
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
             <h5>Certifications</h5>
             <img src={adwordsLogo} style={{height:'100px',width:'100px'}}alt="adwords logo"/>
@@ -69,6 +80,8 @@ class Resume extends Component {
             <br/>
             <img src={hubspotLogo} style={{height:'100px',width:'200px'}}alt="hubspot logo"/>
             <img src={freecodecampLogo} style={{height:'100px',width:'100px'}}alt="free code camp logo"/>
+            <br/>
+            {/* <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/> */}
 
 
 

@@ -14,7 +14,7 @@ body {
   background: -webkit-linear-gradient(to right, #FFFFFF, #ECE9E6);
   background: linear-gradient(to right, #FFFFFF, #ECE9E6); */
 
-  position:fixed;
+
   top:0;
   left:0;
   width:100%;
@@ -76,9 +76,6 @@ body {
   padding:8px;
 }
 
-.projects-grid {
-  display:flex;
-}
 
 .submit-btn{
   background-color:#0326A5 !important;
@@ -92,4 +89,18 @@ body {
   opacity:.8;
   color:white;
   padding:2em;
+}
+
+@media (min-width: 800px){
+.projects-grid {
+  display:flex;
+ }
+ .landing-cards{
+   padding:10px;
+   margin:auto;
+   width:100px;
+ }
+ .article-blog {
+   width:300px;
+ }
 }

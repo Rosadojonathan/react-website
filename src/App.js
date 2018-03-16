@@ -19,7 +19,7 @@ class App extends Component {
           <Header className="header-color" title={<Link style={{textDecoration: 'none',color:'white'}} to="/">Rosado Jonathan - Tech Marketer</Link>} scroll>
               <Navigation>
 
-                  <Link to="resume">Resume</Link>
+                  <Link to="/resume">Resume</Link>
                   <Link to="/blog">Blog</Link>
                   <Link to="/projects">Projects</Link>
                   <Link to="/contact">Contact</Link>
@@ -28,7 +28,7 @@ class App extends Component {
           <Drawer title={<Link style={{textDecoration:'none',color:'black'}} to='/'>Tech-Marketer </Link>}>
               <Navigation>
 
-                <Link to="resume">Resume</Link>
+                <Link to="/resume">Resume</Link>
                 <Link to="/blog">Blog</Link>
                 <Link to="/projects">Projects</Link>
                 <Link to="/contact">Contact</Link>

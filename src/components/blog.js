@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from 'react-helmet';
 
 import { Grid, Cell, Card, CardTitle, CardMenu,IconButton, CardText, CardActions,Link} from 'react-mdl';
 
@@ -24,11 +25,16 @@ class Blog extends Component {
   render() {
     return (
     <div className="article-grid">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>Blog - Tech-Marketer</title>
+      </Helmet>
 
-
-      {this.state.posts.map(post=>
+      {this.state.posts.reverse().map(post=>
 
         <Article
+          className="article-blog"
+          style={{width:'80%'}}
           key={post.id}
           cardTitle={post.cardTitle}
           cardText={post.cardText}

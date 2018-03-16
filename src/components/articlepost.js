@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Helmet} from 'react-helmet';
 import { Grid, Cell } from 'react-mdl';
 
 class ArticlePost extends Component {
@@ -39,10 +40,16 @@ componentDidMount(){
       return (
 
         <div style={{width:'80%',margin:'auto'}}>
+
+          <Helmet>
+            <meta charSet="utf-8" />
+            <title>{this.state.article[0].title} - Tech-Marketer</title>
+          </Helmet>
+
           <Grid className="article-post">
             <Cell col={9}>
-              <h1 style={{fontSize:'28px',fontWeight:'bold'}}>{this.state.article[0].title}</h1>
-              <p>{this.state.article[0].content}</p>
+              <h1 style={{fontSize:'1.8em',fontWeight:'bold'}}>{this.state.article[0].title}</h1>
+              <p style={{textIndent:'2em'}}>{this.state.article[0].content}</p>
             </Cell>
 
           </Grid>
