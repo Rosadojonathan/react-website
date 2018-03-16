@@ -91,6 +91,30 @@ body {
   padding:2em;
 }
 
+.category-tabs{
+  text-align: center;
+  width:95%;
+
+}
+
+.category-tabs p {
+margin-top: 10px;
+}
+
+@media (max-width: 800px){
+  .category-tabs {
+    margin-top:45px;
+    vertical-align: middle;
+  }
+  .category-tabs p {
+    line-height:1.6em;
+    font-size: 0.7em;
+    font-weight: bold;
+
+
+  }
+}
+
 @media (min-width: 800px){
 .projects-grid {
   display:flex;
@@ -103,4 +127,5 @@ body {
  .article-blog {
    width:300px;
  }
+
 }

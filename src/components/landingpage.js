@@ -54,7 +54,7 @@ class Landing extends Component {
 
             {this.state.postsHome.slice(-3).map(post=>
 
-                <Card  key={post.id} shadow={5} style={{margin:'auto',marginBottom:'20px'}} className="landing-cards">
+                <Card  key={post.id} shadow={5} style={{margin:'auto',marginBottom:'20px',minHeight:'280px'}} className="landing-cards">
                   <a href={`/blog/${post.linkTitle}`} style={{textDecoration:'none'}}>
                   <CardTitle style={{color:'black',fontSize:"1.4em"}}><b>{post.cardTitle}</b></CardTitle>
                   <CardText style={{fontSize:'1em'}}>{post.cardText}</CardText>

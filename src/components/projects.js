@@ -134,16 +134,16 @@ class Projects extends Component {
   render() {
     return (
       <div className="category-tabs">
-        <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
-          <Tab>React</Tab>
-          <Tab>Machine Learning</Tab>
-          <Tab>Ads Automation</Tab>
-          <Tab>Slackbots</Tab>
+        <Tabs style={{padding:'0px 10px',width:"100%"}}activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
+          <Tab style={{width:'25%'}}><p>React</p></Tab>
+          <Tab style={{width:'25%'}}> <p>Machine Learning</p></Tab>
+          <Tab style={{width:'25%'}}><p>Ads Automation</p></Tab>
+          <Tab style={{width:'25%'}}><p>Slackbots</p></Tab>
 
         </Tabs>
 
 
-          <Grid>
+          <Grid col={12}>
             <Cell col={12}>
               <div className="content">{this.toggleCategories()}</div>
             </Cell>
