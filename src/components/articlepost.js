@@ -49,7 +49,8 @@ componentDidMount(){
           <Grid className="article-post">
             <Cell col={9}>
               <h1 style={{fontSize:'1.8em',fontWeight:'bold'}}>{this.state.article[0].title}</h1>
-              <p style={{textIndent:'2em'}}>{this.state.article[0].content}</p>
+              
+              <p style={{textIndent:'2em'}} dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
             </Cell>
 
           </Grid>

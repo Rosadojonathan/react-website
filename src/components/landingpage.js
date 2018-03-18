@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import {Helmet} from 'react-helmet';
 import {Grid, Cell, Card,CardTitle,Button,CardMenu,IconButton, CardText } from 'react-mdl';
+
 import Article from './article.js';
+// import GoogleTagManager from './google-tag-manager';
 import '../App.css'
 
 
@@ -34,7 +36,10 @@ class Landing extends Component {
         <Helmet>
           <meta charSet="utf-8" />
           <title>Home - Tech-Marketer</title>
+          <meta name="google-site-verification" content="a37PJdVoQ82y0OjypAxGBK1T0nPvph736rwCkcivuEk" />
+
         </Helmet>
+        {/* <GoogleTagManager gtmId='GTM-WQ35TQS'> </GoogleTagManager> */}
         <Grid className="landing-grid">
           <Cell col={12}>
             <img className="avatar-img img-circle" src={avatar} alt="bitmoji jonathan" />

@@ -5,7 +5,10 @@ import { Tabs, Tab,Grid,Cell,Card,CardTitle,Button,CardMenu,IconButton, CardText
 import machineLearningIcon from '../img/machinelearningicon.svg';
 import facebookIcon from '../img/facebookicon.svg';
 import slackIcon from '../img/slackicon.png';
-import reactIcon from '../img/reacticon.png'
+import reactIcon from '../img/reacticon.png';
+
+// import GoogleTagManager from './google-tag-manager';
+
 
 class Projects extends Component {
   constructor(props){
@@ -19,15 +22,12 @@ class Projects extends Component {
       return (
       <div className="projects-grid">
 
-        <Helmet>
-          <meta charSet="utf-8" />
-          <title>Projets Tech-Market - Tech-Marketer</title>
-        </Helmet>
+
 
         <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
           <CardTitle style={{color:'#fff',height:'176px',background:`url(${reactIcon}) center / cover`}}></CardTitle>
           <CardTitle style={{color:'black', fontWeight:'bold'}}>Création d'un site internet sous React</CardTitle>
-          <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+          <CardText>Je me suis lancé dans le développement de ce site internet codé entièrement en JavaScript grâce aux technologies React et Node.js. Ce projet me permet d'expérimenter avec le SEO des frameworks JS ainsi que de m'exercer au déploiement de plans de tracking.</CardText>
            <CardActions border>
              <Button colored style={{textAlign:'center'}}>GitHub</Button>
 
@@ -44,7 +44,7 @@ class Projects extends Component {
           <Card shadow={5} style={{minWidth:'450',margin:'auto'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${machineLearningIcon}) center / cover`}}></CardTitle>
             <CardTitle style={{color:'black', fontWeight:'bold'}}>Projet Machine Learning: Prédiction de pertinence d'un produit sur les canaux publicitaires</CardTitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+            <CardText>Ce projet m'a permit de mettre en application mes connaissances en Statistiques et Machine Learning appliqué au Marketing grâce à Python. </CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
 
@@ -62,8 +62,8 @@ class Projects extends Component {
         <div className="projects-grid">
           <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${facebookIcon}) center / cover`}}></CardTitle>
-            <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la création de Facebook Ads</CardTitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+            <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la création de Facebook Ads avec Python</CardTitle>
+            <CardText style={{maxHeight:"50px"}}>Comment semi-automatiser la création de Facebook Ads grâce au SDK Python de l'API Marketing de Facebook en quelques heures.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
              </CardActions>
@@ -74,7 +74,7 @@ class Projects extends Component {
           <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${facebookIcon}) center / cover`}}></CardTitle>
             <CardTitle style={{color:'black', fontWeight:'bold'}}>Automatisation de la sponsorisation de posts Facebook</CardTitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+            <CardText style={{maxHeight:"50px"}}>Comment semi-automatiser la sponsorisation de posts Facebook d'une page à nouveau grâce au SDK Python de l'API Marketing de Facebook.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
              </CardActions>
@@ -91,7 +91,7 @@ class Projects extends Component {
           <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
             <CardTitle style={{color:'black', fontWeight:'bold'}}>Slackbot d'alerte CPA Facebook Ads</CardTitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+            <CardText style={{maxHeight:"70px"}}>Ce script envoie automatiquement des alertes sur un channel Slack lorsque les coûts d'acquisition publicitaires d'une campagne Facebook dépassent un certain montant.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
              </CardActions>
@@ -103,7 +103,7 @@ class Projects extends Component {
           <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
             <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
             <CardTitle style={{color:'black', fontWeight:'bold', fontWeight:'bold'}}>Slackbot d'alerte CPA Adwords</CardTitle>
-            <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+            <CardText style={{maxHeight:"70px"}}>Ce script envoie automatiquement des alertes sur un channel Slack lorsque les coûts d'acquisition publicitaires d'une campagne AdWords dépassent un certain montant.</CardText>
              <CardActions border>
                <Button colored style={{textAlign:'center'}}>GitHub</Button>
              </CardActions>
@@ -115,7 +115,7 @@ class Projects extends Component {
             <Card shadow={5} style={{minWidth:'450',margin:'auto',marginBottom:'25px'}}>
               <CardTitle style={{color:'#fff',height:'176px',background:`url(${slackIcon}) center / cover`}}></CardTitle>
               <CardTitle style={{color:'black', fontWeight:'bold'}}>Slackbot d'alerte absence de stocks sur fiche produit</CardTitle>
-              <CardText>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, nostrum id quasi et, provident veniam porro consectetur molestias atque voluptatibus ipsa dolorum, asperiores quibusdam quidem nesciunt mollitia numquam ipsam. Quidem.</CardText>
+              <CardText style={{maxHeight:"70px"}}>Ce script itère toutes les heures sur les campagnes AdWords actives d'un compte pour lancer un crawler de type headless browser pour exécuter le JavaScript de la page et vérifier que le produit affiche bien des stocks dans la variante affichée par défaut.</CardText>
                <CardActions border>
                  <Button colored style={{textAlign:'center'}}>GitHub</Button>
                </CardActions>
@@ -134,6 +134,12 @@ class Projects extends Component {
   render() {
     return (
       <div className="category-tabs">
+
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Projets Tech-Market - Tech-Marketer</title>
+        </Helmet>
+
         <Tabs style={{padding:'0px 10px',width:"100%"}}activeTab={this.state.activeTab} onChange={(tabId) => this.setState({activeTab: tabId})} ripple>
           <Tab style={{width:'25%'}}><p>React</p></Tab>
           <Tab style={{width:'25%'}}> <p>Machine Learning</p></Tab>

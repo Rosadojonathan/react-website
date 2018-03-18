@@ -12,6 +12,9 @@ import datacampLogo from '../img/datacamp.png';
 import hubspotLogo from '../img/hubspot-logo.jpg';
 import freecodecampLogo from '../img/freecodecamp.jpeg';
 import linkedinLogo from '../img/linkedin.png';
+import imageJonathan from '../img/imagecv7.jpg'
+
+import '../App.css';
 
 class Resume extends Component {
   constructor(props){
@@ -51,13 +54,13 @@ class Resume extends Component {
         <Grid>
           <Cell col={4}>
 
-            <div style={{textAlign:'center'}}>
-              <img src="https://www.shareicon.net/download/2015/09/18/103157_man_512x512.png" alt="avatar" style={{height:'200px'}}/>
+            <div style={{textAlign:'center',bottom:'30px'}}>
+              <img className="avatar-img img-circle" src={imageJonathan} alt="avatar" style={{height:'auto',width:'300px'}}/>
             </div>
             <h2 style={{paddingTop:'2em'}}>Jonathan Rosado</h2>
             <h4 style={{color:'grey'}}>Tech-Marketer</h4>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
-            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. Une journée sans apprendre quoi que ce soit de nouveau est une journée perdue.</p>
+            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. Une journée sans apprendre est une journée perdue.</p>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
             <h5>Addresse</h5>
             <p>Toulouse, Occitanie</p>
@@ -110,7 +113,7 @@ class Resume extends Component {
             startYear={2017}
             endYear={2018}
             schoolName="Université Capitole - IAE Toulouse"
-            schoolDescription="Cette formation m'a permit de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mon mémoire traite de l'automatisation du SEA et Social Media Advertising: quelle réalisation, enjeux et bénéfices pour le Marketeur."
+            schoolDescription="Cette formation m'a permit de consolider mes connaissances en Marketing Digital acquises lors de mon expérience professionnelle en alternance, notamment en SEO et en stratégie Marketing. Mon mémoire traite de l'automatisation du SEA et Social Media Advertising: quelle réalisation, enjeux et bénéfices pour le Marketeur?"
             schoolDegree="Master 2 - Marketing Digital"
             />
 

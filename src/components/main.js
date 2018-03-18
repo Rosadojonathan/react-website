@@ -14,10 +14,10 @@ import ArticlePost from './articlepost';
 const Main = () => (
   <Switch>
     <Route exact path="/" component={LandingPage}/>
-    <Route path="/aboutme" component={AboutMe}/>
+    <Route path="/apropos" component={AboutMe}/>
     <Route path="/contact" component={Contact}/>
-    <Route path="/projects" component={Projects}/>
-    <Route path="/resume" component={Resume}/>
+    <Route path="/projets" component={Projects}/>
+    <Route path="/cv" component={Resume}/>
     <Route exact path="/blog" component={Blog} />
     <Route path="/blog/:article" component={ArticlePost} />
 

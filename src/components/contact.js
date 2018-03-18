@@ -91,7 +91,7 @@ class Contact extends Component {
             />
 
             <br/>
-        <Button raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
+        <Button id='contact-form' raised colored ripple style={{backgroundColor:bgColor}} onClick={() => this.onSubmit()} > {message}</Button>
 
       </Cell>
     </Grid>
