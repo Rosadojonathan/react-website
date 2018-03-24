@@ -7,9 +7,6 @@ import Article from './article.js';
 // import GoogleTagManager from './google-tag-manager';
 import '../App.css'
 
-
-
-
 import avatar from '../img/thinking.jpeg';
 
 
@@ -31,6 +28,8 @@ class Landing extends Component {
   }
 
   render() {
+
+    const maxCardTextLength = 250;
     return (
       <div style={{width:'100%',margin:'auto'}}>
         <Helmet>
@@ -46,7 +45,7 @@ class Landing extends Component {
             <div className="banner-text">
               <h1>Tech-Marketer</h1>
               <hr/>
-              <p>SEM - Programming - Data Science</p>
+              <p>SEM - Programming - Data Science - Analytics</p>
 
 
 
@@ -61,8 +60,9 @@ class Landing extends Component {
 
                 <Card  key={post.id} shadow={5} style={{margin:'auto',marginBottom:'20px',minHeight:'280px'}} className="landing-cards">
                   <a href={`/blog/${post.linkTitle}`} style={{textDecoration:'none'}}>
-                  <CardTitle style={{color:'black',fontSize:"1.4em"}}><b>{post.cardTitle}</b></CardTitle>
-                  <CardText style={{fontSize:'1em'}}>{post.cardText}</CardText>
+
+                  <CardTitle style={{color:'black',fontSize:"1.4em",lineHeight: post.cardTitle.length>70 ? '0.9em':'1em'}}><b>{post.cardTitle}</b></CardTitle>
+                  <CardText style={{fontSize:'1em'}}>{ post.cardText.length > maxCardTextLength ? post.cardText.substr(0,247) + '...' : post.cardText}</CardText>
                   </a>
                 </Card>
 

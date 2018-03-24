@@ -11,6 +11,8 @@ import './App.css';
 
 
 class App extends Component {
+  
+
   render() {
     return (
       <div className="demo-big-content">
@@ -18,7 +20,7 @@ class App extends Component {
       <Layout>
           <Header className="header-color" title={<Link style={{textDecoration: 'none',color:'white'}} to="/">Rosado Jonathan - Tech Marketer</Link>} scroll>
               <Navigation>
-
+{/* key='1' onMouseEnter={this.onHover.bind(this)} onMouseLeave={this.onHover.bind(this,this.key)} style={{transform: this.state.hovered && this.state.key == this.props.key ? 'skew(-15deg, 0deg)' : 'skew(0)'}} */}
                   <Link to="/cv">CV</Link>
                   <Link to="/blog">Blog</Link>
                   <Link to="/projets">Projets</Link>

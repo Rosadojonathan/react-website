@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import {Helmet} from 'react-helmet';
 import { Grid, Cell } from 'react-mdl';
 
+import '../css/articlecss.css';
+
 class ArticlePost extends Component {
   constructor(props){
     super(props)
@@ -49,8 +51,8 @@ componentDidMount(){
           <Grid className="article-post">
             <Cell col={9}>
               <h1 style={{fontSize:'1.8em',fontWeight:'bold'}}>{this.state.article[0].title}</h1>
-              
-              <p style={{textIndent:'2em'}} dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
+
+              <p dangerouslySetInnerHTML={{__html: this.state.article[0].content}} />
             </Cell>
 
           </Grid>
@@ -58,8 +60,9 @@ componentDidMount(){
   )  }
     else{
       return (
-        <div>
-          <h3>Loading...</h3>
+        <div style={{textAlign:'center'}}>
+          <img  src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Loading_icon.gif" />
+
 
 
         </div>

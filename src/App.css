@@ -101,6 +101,14 @@ body {
 margin-top: 10px;
 }
 
+.article-list:hover{
+  background-color: #e16600;
+}
+
+.link-hover:hover{
+  transform: rotate(-10deg) skew(-10deg, 0);
+}
+
 @media (max-width: 800px){
   .category-tabs {
     margin-top:45px;

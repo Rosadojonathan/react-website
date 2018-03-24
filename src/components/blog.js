@@ -30,10 +30,9 @@ class Blog extends Component {
         <title>Blog - Tech-Marketer</title>
       </Helmet>
 
-      {this.state.posts.reverse().map(post=>
+      {this.state.posts.map(post=>
 
         <Article
-          className="article-blog"
           style={{width:'80%'}}
           key={post.id}
           cardTitle={post.cardTitle}

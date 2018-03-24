@@ -54,13 +54,13 @@ class Resume extends Component {
         <Grid>
           <Cell col={4}>
 
-            <div style={{textAlign:'center',bottom:'30px'}}>
+            <div style={{textAlign:'center'}}>
               <img className="avatar-img img-circle" src={imageJonathan} alt="avatar" style={{height:'auto',width:'300px'}}/>
             </div>
             <h2 style={{paddingTop:'2em'}}>Jonathan Rosado</h2>
             <h4 style={{color:'grey'}}>Tech-Marketer</h4>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
-            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. Une journée sans apprendre est une journée perdue.</p>
+            <p>D'abord autodidacte dans le domaine des langues, j'ai ensuite développé un intérêt pour le Marketing Digital, la programmation et les statistiques que je combine pour aider les entreprises à atteindre leur croissance. J'essaie quotidiennement de me challenger pour développer de nouvelles compétences.</p>
             <hr style={{borderTop:'3px solid #3E2723',width:'50%'}}/>
             <h5>Addresse</h5>
             <p>Toulouse, Occitanie</p>
@@ -102,7 +102,7 @@ class Resume extends Component {
               startYear="Février 2017"
               endYear="Maintenant"
               jobName="SEA Manager & Market-Tech"
-              jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux scripts d'automatisation et un modèle prédictif de Machine Learning afin de décupler mon efficacité et aider la startup à scaler son système d'acquisition."
+              jobDescription="En charge de l'acquisition payante sur les plateformes publicitaires (AdWords, Facebook Ads, Instagram Ads, Snapchat Ads) en FR, EN, ES, DE, IT et NL. J'ai mis en place de nombreux scripts d'automatisation et un modèle prédictif de Machine Learning afin d'augmenter mon efficacité et aider la startup à scaler son système d'acquisition."
             />
 
 
@@ -145,6 +145,10 @@ class Resume extends Component {
               />
               <Skills
               skill="SEO"
+              progress={70}
+              />
+              <Skills
+              skill="Analytics"
               progress={70}
               />
               <Skills
